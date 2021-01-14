@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <BlazorEnableCompression>false</BlazorEnableCompression>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
