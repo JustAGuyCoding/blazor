@@ -1,0 +1,37 @@
+﻿@inject HttpClient Http
+
+<button class="btn btn-primary" @onclick="FetchSkills">Show related skills</button>
+
+@if (skills != null && 0 < skills.Length)
+{
+    <p class="pt-4">
+        Other relevant experience includes: 
+    </p>
+    <ul class="pt-1">        
+        @foreach (var item in skills)
+        {
+            <li>@item.Title @(string.Empty != item.Info ? "(" + @item.Info.ToString() + ")" : "") </li>
+        }        
+    </ul>
+}
+
+@code {
+        public class Skill
+    {
+        public string Title { get; set; }
+        public string Info   { get; set; }     
+    }
+
+    private Skill[] skills;
+
+    public async Task FetchSkills()
+    {
+         if (skills == null || 0 == skills.Length)  {
+            skills = await Http.GetFromJsonAsync<Skill[]>("sample-data/skills.json");
+            return;
+         }
+         skills = Array.Empty<Skill>();
+    }
+
+
+}
