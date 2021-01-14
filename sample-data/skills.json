@@ -1,0 +1,22 @@
+[
+  {
+    "title": "MSBuild",
+    "info": "Umbraco Build Servers"
+  },
+  {
+    "title": "Azure",
+    "info":  "App Services, SQL Servers"
+  },
+  {
+    "title": "AWS",
+    "info": "LightSail, EC2 Windows Server, Build Server using GitLabRunner, S3 Bucket"
+  },
+  {
+    "title": "NUnit",
+    "info": ""
+  },
+  {
+    "title": "Moq",
+    "info": ""
+  }
+]
